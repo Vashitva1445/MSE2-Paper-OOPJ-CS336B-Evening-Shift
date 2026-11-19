@@ -1,0 +1,47 @@
+### Add a book (POST)
+POST http://localhost:8080/books
+Content-Type: application/json
+
+{
+  "id": 1,
+  "title": "Java Programming",
+  "author": "James Gosling",
+  "category": "Programming",
+  "availableCopies": 5
+}
+
+### Add another book
+POST http://localhost:8080/books
+Content-Type: application/json
+
+{
+  "id": 2,
+  "title": "Spring Boot Basics",
+  "author": "Craig Walls",
+  "category": "Programming",
+  "availableCopies": 3
+}
+
+### Get all books
+GET http://localhost:8080/books
+
+### Get book by ID
+GET http://localhost:8080/books/1
+
+### Update book
+PUT http://localhost:8080/books/1
+Content-Type: application/json
+
+{
+  "id": 1,
+  "title": "Core Java",
+  "author": "James Gosling",
+  "category": "Computer Science",
+  "availableCopies": 8
+}
+
+### Delete book
+DELETE http://localhost:8080/books/1
+
+### Try a missing book
+GET http://localhost:8080/books/999
